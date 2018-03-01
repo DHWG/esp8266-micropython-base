@@ -36,3 +36,9 @@ Access to the MicroPython REPL is possible with the _screen_ tool:
 ```sh
 screen /dev/cu.wchusbserial1410 11520
 ```
+
+## MQTT Access
+
+Good tools:
+* http://www.jensd.de/apps/mqttfx/
+* http://kamilfb.github.io/mqtt-spy/
