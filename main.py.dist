@@ -1,0 +1,30 @@
+# This is executed after boot.py
+
+import time
+import ubinascii
+from umqtt.simple import MQTTClient
+
+MQTT_CID = b'esp-' + ubinascii.hexlify(machine.unique_id())
+
+mqtt = MQTTClient(MQTT_CID, config.MQTT_HOST)
+
+def mqtt_callback(topic, message):
+    # called when a new MQTT message arrives
+    pass
+
+def cycle():
+    # read inputs of the chip etc
+    pass
+
+
+if __name__ == '__main__':
+    print('Running main loop.')
+    mqtt.set_callback(mqtt_callback)
+    mqtt.connect()
+    try:
+        while 1:
+            cycle()
+            mqtt.check_msg()
+            time.sleep_ms(100) # sleep 100ms
+    finally:
+        mqtt.disconnect()

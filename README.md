@@ -27,8 +27,7 @@ to the chip.
 ampy -p /dev/cu.wchusbserial1410 -b 115200 put boot.py /boot.py
 ```
 
-For WLAN access a `/wlan_credentials.txt` file of the format `SSID=PASSWORD` must
-present.
+Make sure to create an instance of `config.py` put it on the chip.
 
 ## REPL Access
 
