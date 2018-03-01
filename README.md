@@ -34,7 +34,7 @@ Make sure to create an instance of `config.py` put it on the chip.
 Access to the MicroPython REPL is possible with the _screen_ tool:
 
 ```sh
-screen /dev/cu.wchusbserial1410 11520
+screen /dev/cu.wchusbserial1410 115200
 ```
 
 ## MQTT Access
